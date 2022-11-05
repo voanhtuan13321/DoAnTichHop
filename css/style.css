@@ -3466,3 +3466,60 @@ ol {
 		font-size: 24px;
 	}
 }
+
+/* Dùng chung cho quản lý */
+.btn-margin-bottom {
+    margin-bottom: 30px;
+}
+
+/* Dùng cho Quản Lý Ưu Đãi */
+.info-main {
+    padding: 1.5rem 1rem;
+}
+
+.info-aside {
+    padding: 1.5rem 1rem;
+    border-left: 1px solid #e5e7ea;
+    height: 100%;
+}
+
+.card-product-list {
+    margin-bottom: 10px;
+}
+
+.title-hover{
+	color: #7fad39;
+}
+
+.title-hover:hover{
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+
+.title-focus:focus{
+	color: #7fad39;
+}
+
+.content-uudai{
+    margin-top: 15px;
+}
+
+/* Dùng cho Quản Lý thêm sản phẩm */
+.add-product{
+	font-weight: bolder;
+	border-bottom: 1px solid;
+	padding-bottom: 15px;
+	color: #7fad39;
+}
+.add-info-product{
+	border: 1px solid #7fad39;
+	margin-top: 23px;
+}
+.state{
+	display: inline;
+}
+.checkbox{
+	height: 26px;
+	width: 26px;
+}
