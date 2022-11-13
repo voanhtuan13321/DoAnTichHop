@@ -3517,6 +3517,22 @@ ol {
     padding-right: 1rem;
 }
 
+/* Preview */
+.preview{
+   width: 100px;
+   height: 100px;
+   margin-right: 20px;
+   background: white;
+}
+
+.preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+   /* display: none; */
+}
+
 /* Dùng cho Quản Lý Ưu Đãi */
 
 .info-main {
