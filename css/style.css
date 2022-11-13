@@ -3500,13 +3500,22 @@ ol {
     }
 }
 
-
 /* Dùng chung cho quản lý */
-
-.btn-margin-bottom {
-    margin-bottom: 30px;
+.quanly-align-center {
+    display: flex;
+    align-items: center;
 }
 
+.quanly-justify-center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.quanly-css1 {
+    display: flex;
+    margin-top: 1rem;
+    padding-right: 1rem;
+}
 
 /* Dùng cho Quản Lý Ưu Đãi */
 

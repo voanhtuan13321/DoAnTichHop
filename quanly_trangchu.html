@@ -123,7 +123,7 @@
                             <i class="fa fa-bars"></i>
                             <span>Danh mục sản phẩm</span>
                         </div>
-                        <ul>
+                        <ul id="ul-danhsach-danhmuc">
                             <li><a href="#">Lap Top</a></li>
                             <li><a href="#">Đồng hồ</a></li>
                             <li><a href="#">Điện thoại</a></li>
@@ -134,16 +134,16 @@
                     <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
-                                <input type="text" placeholder="Tìm kiếm">
-                                <button type="submit" class="site-btn">Tìm kiếm</button>
+                                <input type="text" placeholder="Tìm kiếm" id="input-tim-kiem">
+                                <button type="button" class="site-btn" id="btn-tim-kiem">Tìm kiếm</button>
                             </form>
                         </div>
                     </div>
                     <div>
-                        <a href="./quanly_themsanpham.html"><button type="button" class="btn site-btn btn-margin-bottom"> Thêm </button></a>
+                        <a href="./quanly_themsanpham.html"><button type="button" class="btn site-btn mb-4">Thêm</button></a>
                     </div>
                     <div>
-                        <div class="row featured__filter">
+                        <div class="row featured__filter" id="noi-chua-san-pham">
                             <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
                                 <div class="featured__item">
                                     <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
@@ -287,7 +287,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="./js/quanly_trangchu.js"></script>
 
 
 </body>
