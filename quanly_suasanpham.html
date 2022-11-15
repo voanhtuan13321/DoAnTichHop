@@ -99,7 +99,7 @@
                     <nav class="header__menu">
                         <ul>
                             <li><a href="./quanly_danhmuc.html">Danh Mục</a></li>
-                            <li><a href="./quanly_trangchu.html">Sản Phẩm</a></li>
+                            <li class="active"><a href="./quanly_trangchu.html">Sản Phẩm</a></li>
                             <li><a href="./quanly_uudai.html">Ưu đãi</a></li>
                             <li><a href="./quanly_xemdonhang.html">Xem Đơn Hàng</a></li>
                         </ul>
@@ -124,23 +124,26 @@
                     <p class="h3 add-product">Sửa Sản Phẩm</p>
                     <div >
                         <div class="add-info-product">   
-                            <div class="form-group">
+                            <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Tên Sản Phẩm</p>
                                 <input type="text" name="" class="form-control">
                             </div> 
-                            <div class="form-group">
+                            <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Ảnh</p>
-                                <input type="file" name="ImageUpload"/>
-                            </div> 
-                            <div class="form-group">
+                                <div class='preview'>
+                                    <img id="img" src="" id="img" width="100" height="100">
+                                </div>
+                                <input type="file" name="ImageUpload" id="file"/>
+                            </div>
+                            <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Mô tả</p>
                                 <input type="text" name="" class="form-control">
                             </div> 
-                            <div class="form-group">
+                            <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Giá</p>
                                 <input type="text" name="" class="form-control">
                             </div>  
-                            <div class="form-group" style="display: flex;">
+                            <div class="form-group quanly-css1" style="display: flex;">
                                 <p class="col-md-2 dt state">Trạng thái</p>
                                 <input type="checkbox" name="" class="checkbox">
                             </div> 
@@ -152,6 +155,9 @@
                                     <option value="dienthoai">Điện thoại</option>
                                 </select>
                             </div> 
+                            <div class="form-group quanly-css1 justify-content-around">
+                                <button type="button" class="btn site-btn mb-4" id="">Sửa</button>
+                            </div>
                         </div>
                     </div>
                     <!-- </div> -->
