@@ -12,7 +12,6 @@ fetch(urlApiDanhMuc)
         $('#select-danhmuc').html(htmls);
     });
 
-
 $('#file').change((ev) => {
     const files = ev.target.files;
     const reader = new FileReader();

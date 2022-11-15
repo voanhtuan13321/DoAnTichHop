@@ -1,6 +1,5 @@
 const urlApiDanhMuc = 'http://localhost:8080/api/v1/danhmuc/';
 
-
 const urlParams = new URLSearchParams(window.location.search);
 let id = urlParams.get('id');
 
