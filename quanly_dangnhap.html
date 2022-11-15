@@ -38,7 +38,7 @@
         <div class="humberger__menu__cart">
             <ul>
                 <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                <li><a href="khachhang_giohang.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
             </ul>
             <div class="header__cart__price">item: <span>$150.00</span></div>
         </div>
@@ -49,10 +49,18 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li><a href="./quanly_danhmuc.html">Danh Mục</a></li>
-                <li class="active"><a href="./index.html">Sản Phẩm</a></li>
+                <li class="active"><a href="./index.html">Trang chủ</a></li>
                 <li><a href="./shop-grid.html">Ưu đãi</a></li>
-                <li><a href="./contact.html">Xem Đơn Hàng</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./checkout.html">Check Out</a></li>
+                        <li><a href="./blog-details.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="khachhang_nhanlienhe.html">Liên hệ</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -81,134 +89,76 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__auth">
-                                <a href="./quanly_dangnhap.html"><i class="fa fa-user"></i>Đăng xuất</a>
+                                <a href="khachhang_dangnhap.html"><i class="fa fa-user active"></i>Đăng nhập</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="img/logo_1.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./quanly_danhmuc.html">Danh Mục</a></li>
-                            <li class="active"><a href="./quanly_trangchu.html">Sản Phẩm</a></li>
-                            <li><a href="./quanly_uudai.html">Ưu đãi</a></li>
-                            <li><a href="./quanly_xemdonhang.html">Xem Đơn Hàng</a></li>
+                            <li><a href="khachhang_trangchu.html">Trang chủ</a></li>
+                            <li><a href="./khachhang_uudai.html">Ưu đãi</a></li>
+                            <li><a href="khachhang_lienhe.html">Liên hệ</a></li>
                         </ul>
                     </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__cart">
+                        <ul>
+                            <li><a href="khachhang_giohang.html"><i class="fa fa-shopping-bag"></i><span>3</span></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>
-        </div>
+        </div> -->
     </header>
     <!-- Header Section End -->
 
-    <!-- Hero Section Begin -->
-    <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span>Danh mục sản phẩm</span>
-                        </div>
-                        <ul id="ul-danhsach-danhmuc">
-                            <li><a href="#">Lap Top</a></li>
-                            <li><a href="#">Đồng hồ</a></li>
-                            <li><a href="#">Điện thoại</a></li>
-                        </ul>
+    <!-- Login Section Begin -->
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <h2 class="text-center">Login</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <input type="text" placeholder="Tìm kiếm" id="input-tim-kiem">
-                                <button type="button" class="site-btn" id="btn-tim-kiem">Tìm kiếm</button>
-                            </form>
-                        </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
-                    <div>
-                        <a href="./quanly_themsanpham.html"><button type="button" class="btn site-btn mb-4">Thêm</button></a>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <div>
-                        <div class="row featured__filter" id="noi-chua-san-pham">
-                            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                                <div class="featured__item">
-                                    <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
-                                        <ul class="featured__item__pic__hover">
-                                            <li><a href="./quanly_suasanpham.html">Sửa</a></li>
-                                            <li><a href="#">Xoá</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="featured__item__text">
-                                        <h6><a href="#">Crab Pool Security</a></h6>
-                                        <h5>$30.00</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                                <div class="featured__item">
-                                    <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
-                                        <ul class="featured__item__pic__hover">
-                                            <li><a href="./quanly_suasanpham.html">Sửa</a></li>
-                                            <li><a href="#">Xoá</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="featured__item__text">
-                                        <h6><a href="#">Crab Pool Security</a></h6>
-                                        <h5>$30.00</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                                <div class="featured__item">
-                                    <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
-                                        <ul class="featured__item__pic__hover">
-                                            <li><a href="./quanly_suasanpham.html">Sửa</a></li>
-                                            <li><a href="#">Xoá</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="featured__item__text">
-                                        <h6><a href="#">Crab Pool Security</a></h6>
-                                        <h5>$30.00</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                                <div class="featured__item">
-                                    <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
-                                        <ul class="featured__item__pic__hover">
-                                            <li><a href="./quanly_suasanpham.html">Sửa</a></li>
-                                            <li><a href="#">Xoá</a></li>                                        
-                                        </ul>
-                                    </div>
-                                    <div class="featured__item__text">
-                                        <h6><a href="#">Crab Pool Security</a></h6>
-                                        <h5>$30.00</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        <button type="button" class="btn site-btn btn-margin-bottom">Login</button>
+                        <a class="text-success" href="khachhang_dangki.html">Đăng kí</a>
                     </div>
-                </div>
+                </form>
+
             </div>
+            <div class="col-4"></div>
         </div>
-    </section>
-    <!-- Hero Section End -->
+
+    </div>
+
+    <!-- Login Section End -->
 
 
     <!-- Footer Section Begin -->
@@ -267,9 +217,16 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer__copyright">
-                        <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                        <div class="footer__copyright__text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
                         <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
                     </div>
                 </div>
@@ -287,7 +244,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="./js/quanly_trangchu.js"></script>
+
 
 
 </body>
