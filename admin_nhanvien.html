@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="stylesheet" href="css/quanly_nhanvien.css" type="text/css">
 </head>
 
 <body>
@@ -50,7 +52,7 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li><a href="./quanly_danhmuc.html">Danh Mục</a></li>
-                <li><a href="./index.html">Sản Phẩm</a></li>
+                <li class="active"><a href="./index.html">Sản Phẩm</a></li>
                 <li><a href="./shop-grid.html">Ưu đãi</a></li>
                 <li><a href="./contact.html">Xem Đơn Hàng</a></li>
             </ul>
@@ -81,7 +83,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__auth">
-                                <a href="#" id="btnDangXuat"><i class="fa fa-user"></i>Đăng xuất</a>
+                                <a href="./quanly_dangnhap.html"><i class="fa fa-user"></i>Đăng xuất</a>
                             </div>
                         </div>
                     </div>
@@ -98,10 +100,7 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./quanly_danhmuc.html">Danh Mục</a></li>
-                            <li><a href="./quanly_trangchu.html">Sản Phẩm</a></li>
-                            <li class="active"><a href="./quanly_uudai.html">Ưu đãi</a></li>
-                            <li><a href="./quanly_xemdonhang.html">Xem Đơn Hàng</a></li>
+                            <li class="active"><a href="./admin_nhanvien.html">Nhân Viên</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -118,33 +117,134 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    
+                    <!-- <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Danh mục sản phẩm</span>
+                        </div>
+                        <ul id="ul-danhsach-danhmuc">
+                            <li><a href="#">Lap Top</a></li>
+                            <li><a href="#">Đồng hồ</a></li>
+                            <li><a href="#">Điện thoại</a></li>
+                        </ul>
+                    </div> -->
                 </div>
                 <div class="col-lg-9">
-                    <p class="h3 add-product">Thêm Ưu Đãi</p>
-                    <div >
-                        <div class="add-info-product">   
-                            <div class="form-group quanly-css1">
-                                <p class="col-md-2 dt">Tiêu Đề</p>
-                                <input type="text" name="" class="form-control" id="inputTieuDe">
-                            </div> 
-                            
-                            <div class="form-group quanly-css1">
-                                <p class="col-md-2 dt">Nội Dung</p>
-                                <input type="text" name="" class="form-control" id="inputNoiDung">
-                            </div> 
-                            <div class="form-group quanly-css1 justify-content-around">
-<<<<<<< HEAD
-                                <button type="button" class="btn site-btn mb-4" id="btnThem">Thêm</button>
-=======
-                                <a href="./quanly_uudai.html">
-                                    <button type="button" class="btn site-btn mb-4" id="">Thêm</button>
-                                </a>
->>>>>>> dd652ba42a12657a545bd079174f915c453a5374
-                            </div> 
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <input type="text" placeholder="Tìm kiếm" id="input-tim-kiem">
+                                <button type="button" class="site-btn" id="btn-tim-kiem">Tìm kiếm</button>
+                            </form>
                         </div>
                     </div>
-                    <!-- </div> -->
+                    <div>
+                        <a href="./admin_themnhanvien.html"><button type="button" class="btn site-btn mb-4">Thêm</button></a>
+                    </div>
+                    <div>
+                        <div class="row featured__filter" id="noi-chua-san-pham">
+                            
+                            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                                <div class="featured__itemm">
+                                    <div class="featured__item__picc set-bg">
+                                        
+                                        <a href="./admin_thongtinnhanvien.html">
+                                            <img class="" src="img/blog/details/details-author.jpg" style="height: 189px;">
+                                        </a>
+
+                                        <ul class="featured__item__pic__hover">
+                                            <li><a href="./admin_suanhanvien.html">Sửa</a></li>
+                                            <li><a href="#">Xoá</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="featured__item__text">
+                                        <h5>Lê Cao Thành Nhân</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                                <div class="featured__itemm">
+                                    <div class="featured__item__picc set-bg">
+                                        
+                                        <a href="./quanly_thongtinnhanvien.html">
+                                            <img class="" src="img/blog/details/details-author.jpg" style="height: 189px;">
+                                        </a>
+
+                                        <ul class="featured__item__pic__hover">
+                                            <li><a href="./quanly_suanhanvien.html">Sửa</a></li>
+                                            <li><a href="#">Xoá</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="featured__item__text">
+                                        <h5>Lê Viết Tâm</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                                <div class="featured__itemm">
+                                    <div class="featured__item__picc set-bg">
+                                        
+                                        <a href="./quanly_thongtinnhanvien.html">
+                                            <img class="" src="img/blog/details/details-author.jpg" style="height: 189px;">
+                                        </a>
+
+                                        <ul class="featured__item__pic__hover">
+                                            <li><a href="./quanly_suanhanvien.html">Sửa</a></li>
+                                            <li><a href="#">Xoá</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="featured__item__text">
+                                        <h5>Võ Anh Tuấn</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                                <div class="featured__itemm">
+                                    <div class="featured__item__picc set-bg">
+                                        
+                                        <a href="./quanly_thongtinnhanvien.html">
+                                            <img class="" src="img/blog/details/details-author.jpg" style="height: 189px;">
+                                        </a>
+
+                                        <ul class="featured__item__pic__hover">
+                                            <li><a href="./quanly_suanhanvien.html">Sửa</a></li>
+                                            <li><a href="#">Xoá</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="featured__item__text">
+                                        <h5>Phạm Hữu Trường</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                                <div class="featured__itemm">
+                                    <div class="featured__item__picc set-bg">
+                                        
+                                        <a href="./quanly_thongtinnhanvien.html">
+                                            <img class="" src="img/blog/details/details-author.jpg" style="height: 189px;">
+                                        </a>
+
+                                        <ul class="featured__item__pic__hover">
+                                            <li><a href="./quanly_suanhanvien.html">Sửa</a></li>
+                                            <li><a href="#">Xoá</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="featured__item__text">
+                                        <h5>Trần Thái Vinh</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -228,7 +328,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="./js/quanly_themuudai.js"></script>
+    <script src="./js/quanly_trangchu.js"></script>
 
 
 </body>

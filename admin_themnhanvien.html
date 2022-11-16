@@ -49,18 +49,10 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li><a href="./khachhang_trangchu.html">Trang chủ</a></li>
+                <li><a href="./quanly_danhmuc.html">Danh Mục</a></li>
+                <li><a href="./index.html">Sản Phẩm</a></li>
                 <li><a href="./shop-grid.html">Ưu đãi</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./khachhang_nhanlienhe.html">Liên hệ</a></li>
+                <li><a href="./contact.html">Xem Đơn Hàng</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -89,7 +81,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__auth">
-                                <a href="khachhang_dangnhap.html"><i class="fa fa-user"></i>Đăng nhập</a>
+                                <a href="./quanly_dangnhap.html"><i class="fa fa-user"></i>Đăng xuất</a>
                             </div>
                         </div>
                     </div>
@@ -100,24 +92,15 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo_1.png" alt=""></a>
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="khachhang_trangchu.html">Trang chủ</a></li>
-                            <li><a href="./khachhang_uudai.html">Ưu đãi</a></li>
-                            <li><a href="khachhang_lienhe.html">Liên hệ</a></li>
+                            <li class="active"><a href="./admin_nhanvien.html">Nhân Viên</a></li>
                         </ul>
                     </nav>
-                </div>
-                <div class="col-lg-3">
-                    <div class="header__cart">
-                        <ul>
-                            <li><a class="active" href="khachhang_giohang.html"><i class="fa fa-shopping-bag"></i><span>3</span></a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
             <div class="humberger__open">
@@ -127,82 +110,66 @@
     </header>
     <!-- Header Section End -->
 
-    <!-- Shopping Cart Begin -->
+    <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
             <div class="row">
-                <table class="table table-border">
-                    <thead class="color">
-                        <tr class="text-center">
-                            <th>Ảnh</th>
-                            <th>Tên</th>
-                            <th>Giá</th>
-                            <th>Số lượng</th>
-                            <th>Tổng tiền</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="text-center">
-                            <th>
-                                <div class="featured__item__pic featured__item__hight set-bg w-100" data-setbg="img/featured/feature-1.jpg"></div>
-                            </th>
-                            <th>
-                                <div class="">
-                                    <div class="h6 title title-hover title-focus">Crab Pool Security</div>
-                                    </p>
-                                </div>
-                            </th>
-                            <th>$30.00</th>
-                            <th>
-                                <div class="">
-                                    <button id="btn_them" class="buttun_quantity">+</button> <span> <input class="quantity" type="text" name="" id="" value="10"> </span> <button id="btn_giam" class="buttun_quantity">-</button></th>
+                <div class="col-lg-3">
+
+                </div>
+                <div class="col-lg-9">
+                    <p class="h3 add-product">Thêm Nhân Viên</p>
+                    <div>
+                        <div class="add-info-product">
+                            <div class="form-group quanly-css1">
+                                <p class="col-md-2 dt">Mã Nhân Viên</p>
+                                <input type="text" name="" class="form-control">
                             </div>
-                            <th>300.000$</th>
-                            <th><button id="btn_xoa" class="buttun_quantity buttun-delete">X</button></th>
-                        </tr>
-                        <tr class="text-center">
-                            <th>
-                                <div class="featured__item__pic featured__item__hight set-bg w-100" data-setbg="img/featured/feature-1.jpg"></div>
-                            </th>
-                            <th>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="h6 title title-hover title-focus">Crab Pool Security</div>
+                            <div class="form-group quanly-css1">
+                                <p class="col-md-2 dt">Tên Nhân Viên</p>
+                                <input type="text" name="" class="form-control">
+                            </div> 
+                            <div class="form-group quanly-css1">
+                                <p class="col-md-2 dt">Ảnh</p>
+                                <div class='preview'>
+                                    <img id="img" src="" id="img" width="100" height="100">
                                 </div>
-                            </th>
-                            <th>$30.00</th>
-                            <th><button class="buttun_quantity">+</button> <span> <input class="quantity" type="text" name="" id="" value="10"> </span> <button class="buttun_quantity">-</button></th>
-                            <th>300.000$</th>
-                            <th><button class="buttun_quantity buttun-delete">X</button></th>
-                        </tr>
-                        <tr class="text-center">
-                            <th>
-                                <div class="featured__item__pic featured__item__hight set-bg w-100" data-setbg="img/featured/feature-1.jpg"></div>
-                            </th>
-                            <th>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="h6 title title-hover title-focus">Crab Pool Security</div>
-                                </div>
-                            </th>
-                            <th>$30.00</th>
-                            <th><button class="buttun_quantity">+</button> <span> <input class="quantity" type="text" name="" id="" value="10"> </span> <button class="buttun_quantity">-</button></th>
-                            <th>300.000$</th>
-                            <th><button class="buttun_quantity buttun-delete">X</button></th>
-                        </tr>
-                    </tbody>
-                    </tr>
-                </table>
-                <div class="d-flex justify-content-end w-100">
-                    <button id="btn_thanhtoan" type="button" class="btn site-btn btn-margin-bottom">Thanh toán</button>
+                                <input type="file" name="ImageUpload" id="file"/>
+                            </div>
+                            <div class="form-group quanly-css1">
+                                <p class="col-md-2 dt">Ngày Sinh</p>
+                                <input type="date" name="" class="form-control">
+                            </div> 
+                            <div class="form-group quanly-css1">
+                                <p class="col-md-2 dt">Số Điện Thoại</p>
+                                <input type="text" name="" class="form-control">
+                            </div> 
+                            <div class="form-group quanly-css1">
+                                <p class="col-md-2 dt">CCCD</p>
+                                <input type="text" name="" class="form-control">
+                            </div>  
+                            <div class="form-group quanly-css1">
+                                <p class="col-md-2 dt">Tài Khoản</p>
+                                <input type="text" name="" class="form-control">
+                            </div> 
+                            <div class="form-group quanly-css1">
+                                <p class="col-md-2 dt">Mật Khẩu</p>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="form-group quanly-css1 justify-content-around">
+                                <a href="./admin_nhanvien.html">
+                                    <button type="button" class="btn site-btn mb-4" id="btn-them">Thêm</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
     </section>
-    <!-- Shopping Cart End -->
+    <!-- Hero Section End -->
 
-    <!-- Total Begin-->
-
-    <!-- Total End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">
@@ -264,9 +231,9 @@
                             <p>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
@@ -281,14 +248,13 @@
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
+    <!-- <script src="js/jquery.nice-select.min.js"></script> -->
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/khachhang_giohang.js"></script>
-
+    <script src="./js/quanly_themsanpham.js"></script>
 
 
 </body>
