@@ -1,41 +1,24 @@
 if (!localStorage.getItem('idNhanVien')) {
-    location.href = './quanly_dangnhap.html'
+    location.href = './quanly_dangnhap.html';
 }
 
-const urlApiDanhMuc = 'http://localhost:8080/api/v1/danhmuc/';
-const urlApiSanPham = 'http://localhost:8080/api/v1/sanpham/';
+const urlApiUuDai = 'http://localhost:8080/api/v1/uudai/';
 
-fetch(urlApiDanhMuc)
-    .then((response) => response.json())
-    .then((data) => {
-        const listDanhMuc = data.data;
-        const htmls = listDanhMuc.map((item) => 
-            (`
-                <option value="${item.id}">${item.tenDanhMuc}</option>
-            `)
-        );
-        $('#select-danhmuc').html(htmls);
+const urlParams = new URLSearchParams(window.location.search);
+let id = urlParams.get('id');
+
+fetch(urlApiUuDai + id)
+    .then(response => response.json())
+    .then(data => {
+        $('#inputTieuDe').val(data.data.tieuDe);
+        $('#inputNoiDung').val(data.data.noiDung);
     });
 
-$('#file').change((ev) => {
-    const files = ev.target.files;
-    const reader = new FileReader();
-    reader.readAsDataURL(files[0]);
-    reader.addEventListener('load', (ev) => {
-        let base = ev.target.result;
-        $('#img').attr('src', base);
-        localStorage.setItem('base64IMG', JSON.stringify(base));
-    })
-});
-
-$('#btn-them').click((e) => {
+$('#btnSua').click(e => {
     let data = {
-        'tenSanPham' : $('#input-tensanpham').val(),
-        'anh' : JSON.parse(localStorage.getItem('base64IMG')),
-        'moTa' : $('#input-mota').val(),
-        'gia' : $('#input-gia').val(),
-        'trangThai' : document.getElementById('input-trangthai').checked,
-        'idDanhMuc' : Number($('#select-danhmuc').val()),
+        'id' : Number(id),
+        'tieuDe' : $('#inputTieuDe').val(),
+        'noiDung' : $('#inputNoiDung').val(),
         'idNhanVien' : localStorage.getItem('idNhanVien')
     };
 
@@ -57,10 +40,10 @@ $('#btn-them').click((e) => {
         return response.json(); // parses JSON response into native JavaScript objects
     }
     
-    postData(urlApiSanPham, data)
+    postData(urlApiUuDai, data)
         .then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
-            //location.href = './quanly_trangchu.html';
+            location.href = './quanly_uudai.html';
         });
 });
 

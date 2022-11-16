@@ -1,3 +1,6 @@
+if (!localStorage.getItem('idNhanVien')) {
+    location.href = './quanly_dangnhap.html';
+}
 
 const urlApiDanhMuc = 'http://localhost:8080/api/v1/danhmuc/';
 
@@ -28,4 +31,10 @@ $('#btn-them-danhmuc').click((e) => {
         });
     
     window.location = "quanly_danhmuc.html"
+});
+
+$('#btnDangXuat').click((e) => {
+    localStorage.removeItem('idNhanVien');
+    localStorage.removeItem('base64IMG');
+    location.href = './quanly_dangnhap.html';
 });

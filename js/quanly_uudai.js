@@ -2,36 +2,40 @@ if (!localStorage.getItem('idNhanVien')) {
     location.href = './quanly_dangnhap.html';
 }
 
-const urlApiDanhMuc = 'http://localhost:8080/api/v1/danhmuc/';
+const urlApiUuDai = 'http://localhost:8080/api/v1/uudai/';
 
-fetch(urlApiDanhMuc)
-    .then((response) => response.json())
-    .then((data) => {
-        const listDanhMuc = data.data;
-        const htmls = listDanhMuc.map((item) => 
+fetch(urlApiUuDai)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        let htmls = data.data.map((item) => 
             (`
                 <article class="card card-product-list"> 
                     <div class="row no-gutters">
                         <div class="col-md-8 quanly-align-center">
                             <div class="info-main">
-                                <a class="h5 title title-hover title-focus">${item.tenDanhMuc}</a>
+                                <a href="./quanly_suauudai.html?id=${item.id}" class="h5 title title-hover title-focus">${item.tieuDe}</a>
+                                <p class="content-uudai">${item.noiDung}</p>
                             </div>
                         </div>
                         <aside class="col-md-4">
                             <div class="info-aside quanly-justify-center">
-                                <a href="./quanly_suadanhmuc.html?id=${item.id}"><button type="button" class="btn site-btn btn-margin-bottom">Sửa</button></a>
-                                <button type="button" class="btn site-btn btn-margin-bottom btn-xoa-danhmuc" onclick="handleDeleteDanhMuc(${item.id})">Xoá</button>
+                                <a href="./quanly_suauudai.html?id=${item.id}"><button type="button" class="btn site-btn" >Sửa</button></a>
+                                <br>
+                                <button type="button" class="btn site-btn" style="height: 49px;" onclick="deleteUuDai(${item.id})">Xoá</button>
                             </div>
                         </aside>
                     </div>
                 </article>
             `)
         );
-        $('#noichua-danhmuc').html(htmls);
+
+        $('#noichua-uudai').html(htmls);
     });
 
-const handleDeleteDanhMuc = (id) => {
-    if (confirm(`Bạn có chắc là muốn xoá danh mục có id là ${id} không ?`)) {
+const deleteUuDai = (id) => {
+    if (confirm(`Bạn có chắc là muốn xoá ưu đãi có id là ${id} không ?`)) {
         async function deleteData(url = '', data = {}) {
             // Default options are marked with *
             const response = await fetch(url, {
@@ -50,7 +54,7 @@ const handleDeleteDanhMuc = (id) => {
             return response.json(); // parses JSON response into native JavaScript objects
         }
         
-        deleteData(urlApiDanhMuc + id, {})
+        deleteData(urlApiUuDai + id, {})
             .then((data) => {
                 console.log(data); // JSON data parsed by `data.json()` call
             });
@@ -58,6 +62,8 @@ const handleDeleteDanhMuc = (id) => {
         window.location = window.location;
     }
 }
+
+
 
 $('#btnDangXuat').click((e) => {
     localStorage.removeItem('idNhanVien');

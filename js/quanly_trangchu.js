@@ -1,3 +1,6 @@
+if (!localStorage.getItem('idNhanVien')) {
+    location.href = './quanly_dangnhap.html';
+}
 
 const urlApiDanhMuc = 'http://localhost:8080/api/v1/danhmuc/';
 const urlApiSanPham = 'http://localhost:8080/api/v1/sanpham/';
@@ -82,6 +85,11 @@ const deleteSanPham = (id) => {
 
 $('#btn-tim-kiem').click((e) => {
     let value = $('#input-tim-kiem').val();
+
+    if (value === '') {
+        return;
+    }
+    
     async function postData(url = '', data = {}) {
         // Default options are marked with *
         const response = await fetch(url, {
@@ -105,4 +113,10 @@ $('#btn-tim-kiem').click((e) => {
             console.log(data); // JSON data parsed by `data.json()` call
             renderSanPham(data.data);
         });
-})
+});
+
+$('#btnDangXuat').click((e) => {
+    localStorage.removeItem('idNhanVien');
+    localStorage.removeItem('base64IMG');
+    location.href = './quanly_dangnhap.html';
+});
