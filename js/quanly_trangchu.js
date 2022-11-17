@@ -35,9 +35,10 @@ const searchSanPhamTheoDanhMuc = (id) => {
 const renderSanPham = (datas) => {
     const htmls = datas.map((item) => 
         (`
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+            <div class="col-lg-4 col-md-4 col-sm-6 mix oranges fresh-meat">
                 <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="${item.anh}">
+                    <div class="featured__item__pic set-bg">
+                        <img src="${item.anh}" style="height: 100%;" alt="ảnh bị lỗi">
                         <ul class="featured__item__pic__hover">
                             <li><a href="./quanly_suasanpham.html?id=${item.id}">Sửa</a></li>
                             <li><a href="#" onclick="deleteSanPham(${item.id})">Xoá</a></li>
