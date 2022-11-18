@@ -57,10 +57,10 @@
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="humberger__menu__contact">
-            <ul>
+            <!-- <ul>
                 <li><i class="fa fa-envelope"></i>nhan@gmail.com</li>
                 <li>Miễn phí giao hàng trong địa bàn đà nẵng</li>
-            </ul>
+            </ul> -->
         </div>
     </div>
     <!-- Humberger End -->
@@ -72,16 +72,16 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
-                            <ul>
+                            <!-- <ul>
                                 <li><i class="fa fa-envelope"></i>voanhtuan13321@gmail.com</li>
                                 <li>Miễn phí giao hàng trong địa bàn đà nẵng</li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__auth">
-                                <a href="./quanly_dangnhap.html"><i class="fa fa-user"></i>Đăng xuất</a>
+                                <a href="#" onclick="logout()"><i class="fa fa-user"></i>Đăng xuất</a>
                             </div>
                         </div>
                     </div>
@@ -122,12 +122,8 @@
                     <div>
                         <div class="add-info-product">
                             <div class="form-group quanly-css1">
-                                <p class="col-md-2 dt">Mã Nhân Viên</p>
-                                <input type="text" name="" class="form-control">
-                            </div>
-                            <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Tên Nhân Viên</p>
-                                <input type="text" name="" class="form-control">
+                                <input type="text" name="" class="form-control" id="inputTen">
                             </div> 
                             <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Ảnh</p>
@@ -138,26 +134,26 @@
                             </div>
                             <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Ngày Sinh</p>
-                                <input type="date" name="" class="form-control">
+                                <input type="date" name="" class="form-control" id="inputNgaySinh">
                             </div> 
                             <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Số Điện Thoại</p>
-                                <input type="text" name="" class="form-control">
+                                <input type="text" name="" class="form-control" id="inputSoDt">
                             </div> 
                             <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">CCCD</p>
-                                <input type="text" name="" class="form-control">
+                                <input type="text" name="" class="form-control" id="inputCccd">
                             </div>  
                             <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Tài Khoản</p>
-                                <input type="text" name="" class="form-control">
+                                <input type="text" name="" class="form-control" id="inputTaiKhoan">
                             </div> 
                             <div class="form-group quanly-css1">
                                 <p class="col-md-2 dt">Mật Khẩu</p>
-                                <input type="text" name="" class="form-control">
+                                <input type="text" name="" class="form-control" id="inputMatKhau">
                             </div>
                             <div class="form-group quanly-css1 justify-content-around">
-                                <a href="./admin_nhanvien.html">
+                                <a href="#">
                                     <button type="button" class="btn site-btn mb-4" id="btn-them">Thêm</button>
                                 </a>
                             </div>
@@ -254,7 +250,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="./js/quanly_themsanpham.js"></script>
+    <script src="./js/admin_themnhanvien.js"></script>
 
 
 </body>

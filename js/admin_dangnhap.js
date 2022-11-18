@@ -1,16 +1,16 @@
 
-const urlApiNhanVien = 'http://localhost:8080/api/v1/nhanvien/';
+const urlApiAdmin = 'http://localhost:8080/api/v1/admin/';
 
-$('#btnLogin').click((e) => {
-    let data = {
-        'taiKhoan' : $('#inputTaiKhoan').val(),
-        'matKhau' : $('#inputMatKhau').val()
+$('#btnLogin').click(e => {
+    const data = {
+        'taiKhoan' : $('#inputEmail').val(),
+        'matKhau' : $('#inputPassword').val()
     };
 
-    async function putData(url = '', data = {}) {
+    async function postData(url = '', data = {}) {
         // Default options are marked with *
         const response = await fetch(url, {
-            method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             credentials: 'same-origin', // include, *same-origin, omit
@@ -25,15 +25,14 @@ $('#btnLogin').click((e) => {
         return response.json(); // parses JSON response into native JavaScript objects
     }
     
-    putData(urlApiNhanVien + 'login', data)
+    postData(urlApiAdmin, data)
         .then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
             if (data.status === 'OK') {
-                localStorage.setItem('idNhanVien', data.data.id);
-                window.location = './quanly_trangchu.html';
+                localStorage.setItem('idAdmin', data.data.id);
+                window.location = './admin_nhanvien.html';
             } else {
                 alert('Tai khoan mat khong khong dung');
             }
         });
-
 });

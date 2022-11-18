@@ -1,21 +1,42 @@
+if (!localStorage.getItem('idAdmin')) {
+    location.href = './admin_dangnhap.html';
+}
 
-const urlApiKhachHang = 'http://localhost:8080/api/v1/khachhang/';
+const urlApiNhanVien = 'http://localhost:8080/api/v1/nhanvien/';
 
-$('#btn_dangki').click((e) => {
-    if ($('#inputMatKhau1').val() !== $('#inputMatKhau2').val()) {
-        alert('Mật khẩu không trùng khớp');
-        return;
-    }
+const searchParam = new URLSearchParams(location.search);
+const id = searchParam.get('id');
 
+fetch(urlApiNhanVien + id)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        let dates = data.data.ngaySinh
+        console.log(dates);
+
+        $('#inputTen').val(data.data.hoTen);
+        $('#img').attr('src', data.data.anh);
+        //document.getElementById('inputNgaySinh').value = dates.split('T')[0];
+        $('#inputNgaySinh').val(dates.split('T')[0]);
+        $('#inputSoDt').val(data.data.soDienThoai);
+        $('#inputCccd').val(data.data.cccd);
+        $('#inputTaiKhoan').val(data.data.taiKhoan);
+        $('#inputMatKhau').val(data.data.matKhau);
+    })
+
+$('#btn-sua').click(e => {
     const data = {
+        'id' : Number(id),
         'hoTen' : $('#inputTen').val(),
         'ngaySinh' : $('#inputNgaySinh').val(),
-        'soDienThoai' : $('#inputSodt').val(),
+        'soDienThoai' : $('#inputSoDt').val(),
         'cccd' : $('#inputCccd').val(),
-        'diaChi' : $('#inputDiaChi').val(),
         'taiKhoan' : $('#inputTaiKhoan').val(),
-        'matKhau' : $('#inputMatKhau1').val()
+        'matKhau' : $('#inputMatKhau').val(),
+        'anh' : $('#img').attr('src')
     };
+
+    console.log(data);
 
     async function postData(url = '', data = {}) {
         // Default options are marked with *
@@ -35,14 +56,18 @@ $('#btn_dangki').click((e) => {
         return response.json(); // parses JSON response into native JavaScript objects
     }
     
-    postData(urlApiKhachHang, data)
+    postData(urlApiNhanVien, data)
         .then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
             if (data.status === 'Faild') {
-                alert('Tên đăng nhập đã tồn tại, xin nhập tên khác');
-            } else {
-                localStorage.setItem('idKhachHang', data.data.id);
-                window.location = './khachhang_trangchu_logined.html';
+                alert('Tên tài khoản đã tồn tại !!!');
+                return;
             }
+            location.href = './admin_nhanvien.html';
         });
 });
+
+const logout = () => {
+    localStorage.removeItem('idAdmin');
+    location.href = './admin_dangnhap.html';
+}
