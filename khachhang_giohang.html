@@ -89,7 +89,8 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__auth">
-                                <a href="khachhang_dangnhap.html"><i class="fa fa-user"></i>Đăng nhập</a>
+                                <a href="./khachhang_dangnhap.html" id="btnDangNhap"><i class="fa fa-user"></i>Đăng nhập</a>
+                                <a href="#" id="btnTaiKhoan"><i class="fa fa-user"></i>Tài khoản</a>
                             </div>
                         </div>
                     </div>
@@ -100,13 +101,16 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo_1.png" alt=""></a>
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="khachhang_trangchu.html">Trang chủ</a></li>
+                            <li>
+                                <a href="./khachhang_trangchu_unlogin.html" id="trangChuUnLogin">Trang chủ</a>
+                                <a href="./khachhang_trangchu_logined.html" id="trangChuLogined">Trang chủ</a>
+                            </li>
                             <li><a href="./khachhang_uudai.html">Ưu đãi</a></li>
                             <li><a href="khachhang_lienhe.html">Liên hệ</a></li>
                         </ul>
@@ -115,7 +119,16 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a class="active" href="khachhang_giohang.html"><i class="fa fa-shopping-bag"></i><span>3</span></a></li>
+                            <li>
+                                <a href="./khachhang_dangnhap.html" id="soLuongUnLogin">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    <span>0</span>
+                                </a>
+                                <a href="#" id="soLuongLogin">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    <span id="soLuong">0</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -142,25 +155,24 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="noiChuaGioHang">
                         <tr class="text-center">
-                            <th>
-                                <div class="featured__item__pic featured__item__hight set-bg w-100" data-setbg="img/featured/feature-1.jpg"></div>
+                            <th style="width: 180px;">
+                                <img src="img/featured/feature-1.jpg" alt="">
                             </th>
                             <th>
-                                <div class="">
-                                    <div class="h6 title title-hover title-focus">Crab Pool Security</div>
-                                    </p>
-                                </div>
+                                <div class="h4 title title-hover title-focus">Crab Pool Security</div>
                             </th>
                             <th>$30.00</th>
                             <th>
-                                <div class="">
-                                    <button id="btn_them" class="buttun_quantity">+</button> <span> <input class="quantity" type="text" name="" id="" value="10"> </span> <button id="btn_giam" class="buttun_quantity">-</button></th>
-                            </div>
+                                <button id="btn_them" class="buttun_quantity pl-2 pr-2">+</button>
+                                <span><input class="quantity" type="text" name="" id="" value="10"></span>
+                                <button id="btn_giam" class="buttun_quantity pl-2 pr-2">-</button>
+                            </th>
                             <th>300.000$</th>
-                            <th><button id="btn_xoa" class="buttun_quantity buttun-delete">X</button></th>
+                            <th><button id="btn_xoa" class="btn btn-danger pl-3 pr-3">X</button></th>
                         </tr>
+
                         <tr class="text-center">
                             <th>
                                 <div class="featured__item__pic featured__item__hight set-bg w-100" data-setbg="img/featured/feature-1.jpg"></div>

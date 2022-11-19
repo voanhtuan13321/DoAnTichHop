@@ -49,7 +49,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="khachhang_trangchu.html">Trang chủ</a></li>
+                <li class="active"><a href="khachhang_trangchu_logined.html">Trang chủ</a></li>
                 <li><a href="./shop-grid.html">Ưu đãi</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
@@ -89,7 +89,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__auth">
-                                <a href="./khachhang_dangnhap.html"><i class="fa fa-user"></i>Đăng nhập</a>
+                                <a href="./khachhang_taikhoan.html"><i class="fa fa-user"></i>Tài khoản</a>
                             </div>
                         </div>
                     </div>
@@ -100,13 +100,13 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo_1.png" alt=""></a>
+                        <a href="#"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./khachhang_trangchu.html">Trang chủ</a></li>
+                            <li class="active"><a href="./khachhang_trangchu_unlogin.html">Trang chủ</a></li>
                             <li><a href="./khachhang_uudai.html">Ưu đãi</a></li>
                             <li><a href="./khachhang_lienhe.html">Liên hệ</a></li>
                         </ul>
@@ -115,7 +115,7 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="khachhang_giohang.html"><i class="fa fa-shopping-bag"></i><span>3</span></a></li>
+                            <li><a href="#" onclick="checkDangNhap()"><i class="fa fa-shopping-bag"></i><span id="soluong">0</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                             <i class="fa fa-bars"></i>
                             <span>Danh mục sản phẩm</span>
                         </div>
-                        <ul>
+                        <ul id="noiChuaDanhMuc">
                             <li><a href="./khachhang_laptop.html">Lap Top</a></li>
                             <li><a href="./khachhang_dongho.html">Đồng hồ</a></li>
                             <li><a href="./khachhang_dienthoai.html">Điện thoại</a></li>
@@ -148,17 +148,18 @@
                     <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
-                                <input type="text" placeholder="Tìm kiếm">
-                                <button type="submit" class="site-btn">Tìm kiếm</button>
+                                <input type="text" placeholder="Tìm kiếm" id="inputTimKiem">
+                                <button type="button" class="site-btn" id="btnTimKiem">Tìm kiếm</button>
                             </form>
                         </div>
                     </div>
                     <div>
 
-                        <div class="row featured__filter">
+                        <div class="row featured__filter" id="noiChuaSanPham">
                             <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
                                 <div class="featured__item">
-                                    <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
+                                    <div class="featured__item__pic set-bg">
+                                        <img src="img/featured/feature-1.jpg" style="height: 100%;" alt="" srcset="">
                                         <ul class="featured__item__pic__hover">
                                             <li><a id="btn_mua" href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
@@ -252,14 +253,14 @@
                         </div>
 
                     </div>
-                    <div class="text-center mt-2">
+                    <!-- <div class="text-center mt-2">
                         <button>Prev</button>
                         <button>1</button>
                         <button>2</button>
                         <button>3</button>
                         <button>...</button>
                         <button>Next</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -274,7 +275,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <a href="#"><img src="./img/logo.png" alt=""></a>
                         </div>
                         <ul>
                             <li>Address: 60-49 Road 11378 New York</li>
@@ -350,7 +351,9 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/khachhang_trangchu.js"></script>
+    <script src="js/khachhang_trangchu_logined.js"></script>
+
+
 
 </body>
 
