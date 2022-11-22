@@ -1,4 +1,3 @@
-
 const urlApiAdmin = 'http://localhost:8080/api/v1/admin/';
 
 $('#btnLogin').click(e => {
