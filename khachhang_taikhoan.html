@@ -89,7 +89,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__auth">
-                                <a href="khachhang_dangnhap.html"><i class="fa fa-user"></i>Đăng nhập</a>
+                                <button onclick="logout()">Đăng xuất</button>
                             </div>
                         </div>
                     </div>
@@ -100,13 +100,13 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo_1.png" alt=""></a>
+                        <a href="#"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="khachhang_trangchu.html">Trang chủ</a></li>
+                            <li><a href="khachhang_trangchu_logined.html">Trang chủ</a></li>
                             <li><a href="./khachhang_uudai.html">Ưu đãi</a></li>
                             <li><a href="./khachhang_lienhe.html">Liên hệ</a></li>
                         </ul>
@@ -115,7 +115,7 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="./khachhang_giohang.html"><i class="fa fa-shopping-bag"></i><span>3</span></a></li>
+                            <li><a href="./khachhang_giohang.html"><i class="fa fa-shopping-bag"></i><span id="soluong">3</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -133,14 +133,14 @@
             <div class="col-4"></div>
             <div class="col-4">
                 <h2 class="text-center">Tài khoản</h2>
-                <form action="/action_page.php">
+                <form>
                     <div class="form-group">
                         <label for="name">Họ tên:</label>
-                        <input type="name" class="form-control" placeholder="Nhập vào họ tên" id="name">
+                        <input type="text" class="form-control" placeholder="Nhập vào họ tên" id="name">
                     </div>
                     <div class="form-group">
                         <label for="taikhoan">Tài khoản:</label>
-                        <input type="taikhoan" class="form-control" placeholder="Nhập vào tai khoản" id="taikhoan">
+                        <input type="text" class="form-control" placeholder="Nhập vào tai khoản" id="taikhoan">
                     </div>
                     <div class="form-group">
                         <label for="matkhau">Mật Khẩu:</label>
@@ -148,18 +148,22 @@
                     </div>
                     <div class="form-group">
                         <label for="ngaysinh">Ngày Sinh:</label>
-                        <input type="ngaysinh" class="form-control" placeholder="Nhập vào ngày sinh" id="ngaysinh">
+                        <input type="date" class="form-control" id="ngaySinh">
+                    </div>
+                    <div class="form-group">
+                        <label for="diaChi">Địa chỉ:</label>
+                        <input type="text" placeholder="Nhập địa chỉ" class="form-control" id="diaChi">
                     </div>
                     <div class="form-group">
                         <label for="sdt">Số điện thoại:</label>
-                        <input type="sdt" class="form-control" placeholder="Nhập vào số điện thoại" id="sdt">
+                        <input type="text" class="form-control" placeholder="Nhập vào số điện thoại" id="sdt">
                     </div>
                     <div class="form-group">
                         <label for="cccd">CCCD:</label>
-                        <input type="cccd" class="form-control" placeholder="Nhập vào CCCD" id="cccd">
+                        <input type="text" class="form-control" placeholder="Nhập vào CCCD" id="cccd">
                     </div>
                     <div class="d-flex justify-content-between mt-4">
-                        <button id="btn_dangki" type="button" class="btn site-btn btn-margin-bottom">Submit</button>
+                        <button id="btnCapNhat" type="button" class="btn site-btn btn-margin-bottom">Cật nhật</button>
                     </div>
                 </form>
 
@@ -255,7 +259,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="./js/khachhang_dangki.js"></script>
+    <script src="./js/khachhang_taikhoan.js"></script>
 
 
 

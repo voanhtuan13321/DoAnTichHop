@@ -1,5 +1,5 @@
 if (!localStorage.getItem('idNhanVien')) {
-    location.href = './quanly_dangnhap.html';
+    location.href = 'quanly_dangnhap.html';
 }
 
 const urlApiDanhMuc = 'http://localhost:8080/api/v1/danhmuc/';

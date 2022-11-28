@@ -86,3 +86,4 @@ const checkDangNhap = () => {
         location.href = './khachhang_dangnhap.html';
     }
 }
+

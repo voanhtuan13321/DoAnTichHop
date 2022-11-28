@@ -60,7 +60,7 @@ $('#btn-them').click((e) => {
     postData(urlApiSanPham, data)
         .then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
-            location.href = './quanly_trangchu.html';
+            location.href = ocation.href;
         });
 });
 

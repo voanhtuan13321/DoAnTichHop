@@ -29,7 +29,7 @@ showSanPham();
 const renderSanPham = (sanPhams) => {
     const htmls = sanPhams.map(item => (`
         <div class="col-lg-4 col-md-4 col-sm-6 mix oranges fresh-meat">
-            <div class="featured__item">
+            <div class="featured__item" onclick="chiTietGioHang(${item.id})">
                 <div class="featured__item__pic set-bg">
                     <img src="${item.anh}" style="height: 100%;" alt="" srcset="">
                     <ul class="featured__item__pic__hover">
@@ -127,7 +127,11 @@ const loadSoLuongSanPham = () => {
             $('#soluong').text(data.data);
         });
 }
-loadSoLuongSanPham()
+loadSoLuongSanPham();
+
+const chiTietGioHang = (id) => {
+    location.href = 'khachhang_chiTietsanpham.html?id=' + id;
+}
 
 const checkDangNhap = () => {
     if (!localStorage.getItem('idKhachHang')) {

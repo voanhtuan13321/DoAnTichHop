@@ -2,6 +2,7 @@
 const urlApiNhanVien = 'http://localhost:8080/api/v1/nhanvien/';
 
 $('#btnLogin').click((e) => {
+
     let data = {
         'taiKhoan' : $('#inputTaiKhoan').val(),
         'matKhau' : $('#inputMatKhau').val()

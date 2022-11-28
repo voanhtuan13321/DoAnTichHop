@@ -3567,7 +3567,9 @@ ol {
     margin-top: 15px;
 }
 
-
+.fresh-meat:hover {
+    cursor: pointer;
+}
 /* Dùng cho Quản Lý thêm sản phẩm */
 
 .add-product {
