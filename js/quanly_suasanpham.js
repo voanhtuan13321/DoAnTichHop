@@ -48,7 +48,7 @@ $('#btnSua').click(e => {
         'id' : Number(id),
         'tenSanPham' : $('#inputTenSanPham').val(),
         'anh' : $('#inputImg').attr('src'),
-        'moTa' : $('#inputGia').val(),
+        'moTa' : $('#inputMoTa').val(),
         'gia' : $('#inputGia').val(),
         'trangThai' : $('#inputTrangThai').prop('checked'),
         'idDanhMuc' : $('#selectDanhMuc').val(),

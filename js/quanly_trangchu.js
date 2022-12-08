@@ -41,7 +41,7 @@ const renderSanPham = (datas) => {
                         <img src="${item.anh}" style="height: 100%;" alt="ảnh bị lỗi">
                         <ul class="featured__item__pic__hover">
                             <li><a href="./quanly_suasanpham.html?id=${item.id}">Sửa</a></li>
-                            <li><a href="#" onclick="deleteSanPham(${item.id})">Xoá</a></li>
+                            <li><a href="" onclick="deleteSanPham(${item.id})">Xoá</a></li>
                         </ul>
                     </div>
                     <div class="featured__item__text">
